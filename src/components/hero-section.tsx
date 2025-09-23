@@ -17,14 +17,14 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <div className="mb-6">
-          <span className="inline-block px-4 py-2 bg-orange-500/90 text-primary-foreground rounded-full text-sm font-medium mb-4 animate-bounce">
+          <span className="inline-block px-4 py-2 bg-green-700/90 text-primary-foreground rounded-full text-sm font-medium mb-4 animate-bounce">
             🎉 Grand Opening Event
           </span>
         </div>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance leading-tight">
           Join Us for Our
-          <span className="block text-primary drop-shadow-lg">Grand Opening!</span>
+          <span className="block drop-shadow-lg text-green-700">Grand Opening!</span>
         </h1>
 
         <p className="text-xl md:text-2xl mb-8 text-pretty max-w-2xl mx-auto opacity-90">

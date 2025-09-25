@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { useEffect, useState } from "react"
 
-export function CountdownTimer() {
+export function CountdownTimer({ eventTime }: { eventTime: Date }) {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -12,8 +12,7 @@ export function CountdownTimer() {
   })
 
   useEffect(() => {
-    // Set target date to December 15, 2024
-    const targetDate = new Date("2024-12-15T10:00:00").getTime()
+    const targetDate = eventTime.getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime()
@@ -61,7 +60,7 @@ export function CountdownTimer() {
         </div>
 
         <div className="bg-accent/10 rounded-lg p-6 border border-accent/20">
-          <p className="text-accent font-semibold mb-2">⏰ Mark Your Calendar!</p>
+          <p className="font-semibold mb-2 text-green-700">⏰ Mark Your Calendar!</p>
           <p className="text-sm text-muted-foreground">
             {"Set a reminder so you don't miss our grand opening celebration"}
           </p>

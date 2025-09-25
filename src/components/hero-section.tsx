@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Calendar, Clock, MapPin } from "lucide-react"
+"use client";
+import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
@@ -8,7 +8,7 @@ export function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/grand-opening-celebration-storefront-with-balloons.jpg')`,
+          backgroundImage: `url('/garden-background.jpg')`,
         }}
       >
         <div className="absolute inset-0 bg-black/40" />
@@ -38,13 +38,14 @@ export function HeroSection() {
             variant="outline"
             size="lg"
             className="border-white text-white hover:bg-white hover:text-foreground px-8 py-4 text-lg bg-transparent"
+            onClick={() => document.getElementById("eventDetails")?.scrollIntoView({ behavior: "smooth" })}
           >
             View Event Details
           </Button>
         </div>
 
         {/* Quick Info */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm opacity-90">
+        {/* <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm opacity-90">
           <div className="flex items-center gap-2">
             <Calendar className="w-4 h-4" />
             <span>December 15, 2024</span>
@@ -57,7 +58,7 @@ export function HeroSection() {
             <MapPin className="w-4 h-4" />
             <span>Downtown Plaza</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
